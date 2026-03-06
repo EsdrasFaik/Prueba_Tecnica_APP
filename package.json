@@ -1,0 +1,84 @@
+{
+  "name": "app_prueba",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8",
+    "@react-google-maps/api": "^2.20.3",
+    "@react-leaflet/core": "^2.1.0",
+    "@react-oauth/google": "^0.12.1",
+    "@react-pdf/renderer": "^4.3.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "admin-lte": "^4.0.0-beta2",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.8",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "crypto-js": "^4.2.0",
+    "datatables.net-bs4": "^2.1.8",
+    "datatables.net-buttons": "^3.2.0",
+    "datatables.net-buttons-bs4": "^3.2.0",
+    "datatables.net-dt": "^2.1.8",
+    "datatables.net-responsive-bs4": "^3.0.3",
+    "datatables.net-responsive-dt": "^3.0.3",
+    "date-fns": "^4.1.0",
+    "gapi-script": "^1.2.0",
+    "jquery": "^3.7.1",
+    "jsbarcode": "^3.11.6",
+    "jszip": "^3.10.1",
+    "jwt-decode": "^4.0.0",
+    "leaflet": "^1.9.4",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.46",
+    "pdfmake": "^0.2.18",
+    "popper.js": "^1.16.1",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.8.4",
+    "react": "^18.3.1",
+    "react-barcode": "^1.5.3",
+    "react-big-calendar": "^1.16.3",
+    "react-bootstrap": "^2.10.6",
+    "react-chartjs-2": "^5.3.0",
+    "react-datepicker": "^7.5.0",
+    "react-dom": "^18.3.1",
+    "react-draggable": "^4.5.0",
+    "react-dropzone": "^14.3.5",
+    "react-icons": "^5.5.0",
+    "react-leaflet": "^4.2.1",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.8.3",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.14.5",
+    "sweetalert2-react-content": "^5.0.7",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
