@@ -4,7 +4,8 @@ import { useSessionStorage } from "../storage/useSessionStorage";
 import {
     MotoristasListar,
     MovimientosListar,
-    VehiculoListar
+    VehiculoListar,
+    MarcasListar
 } from "../../configuracion/apiUrls";
 import { UsuarioContext } from "./UsuarioContext";
 
@@ -17,6 +18,7 @@ const UsuarioState = (props) => {
     const [listaMotoristas, setListaMotoristas] = useState([]);
     const [listaMovimientos, setListaMovimientos] = useState([]);
     const [listaVehiculos, setListaVehiculos] = useState([]);
+    const [listaMarcas, setListaMarcas] = useState([]);
     const [actualizar, setActualizar] = useState(false);
 
     useEffect(() => {
@@ -49,11 +51,15 @@ const UsuarioState = (props) => {
 
             const vehiculos = await axios.get(VehiculoListar);
             setListaVehiculos(vehiculos.data || []);
+
+            const marcas = await axios.get(MarcasListar);
+            setListaMarcas(marcas.data || []);
         } catch (error) {
             console.error("Error al obtener datos:", error);
             setListaMotoristas([]);
             setListaMovimientos([]);
             setListaVehiculos([]);
+            setListaMarcas([]);
         }
     };
 
@@ -84,6 +90,7 @@ const UsuarioState = (props) => {
                 listaMotoristas,
                 listaMovimientos,
                 listaVehiculos,
+                listaMarcas,
                 actualizar,
 
                 // Setters

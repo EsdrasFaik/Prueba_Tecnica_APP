@@ -38,7 +38,7 @@ const Login = () => {
 
       mostraAlerta(`Bienvenido(a) ${usuario.nombre}`, "success");
       await setLogin({ usuario, token });
-      navigate("/app/vehiculos/editar");
+      navigate("/app/vehiculos/listado");
 
     } catch (error) {
       console.error("Error completo:", error);

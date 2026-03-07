@@ -6,8 +6,9 @@ export const UsuarioActualizarContrasena = 'usuarios/actualizar/contrasena';
 export const UsuariosGuardar = 'usuarios/guardar'
 
 //ver imagen
-export const ImagenVehiculo = Servidor + 'imagenes/clientes/';
-export const ImagenMotorista = Servidor + 'imagenes/motoristas';
+export const ImagenVehiculos = Servidor + 'imagenes/vehiculos/';
+export const ImagenMotorista = Servidor + 'imagenes/motoristas/';
+export const ImagenMarcas = Servidor + 'imagenes/marcas/';
 
 
 export const ImagenTipoProducto = Servidor + 'imagenes/productos/categorias/';
@@ -32,6 +33,13 @@ export const VehiculosBuscar = Servidor + 'vehiculos/buscar?id=';
 export const VehiculosGuardar = Servidor + 'vehiculos/guardar';
 export const VehiculosEditar = Servidor + 'vehiculos/editar?id=';
 export const VehiculosEliminar = Servidor + 'vehiculos/elimianr?id=';
+
+//Marcas
+export const MarcasListar = Servidor  + 'marcas/listar';
+export const MarcasBuscar = Servidor + 'marcas/buscar?id=';
+export const MarcasGuardar = Servidor + 'marcas/guardar';
+export const MarcasEditar = Servidor + 'marcas/editar?id=';
+export const MarcasEliminar = Servidor + 'marcas/eliminar?id=';
 
 
 

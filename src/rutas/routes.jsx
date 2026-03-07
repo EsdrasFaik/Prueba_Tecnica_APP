@@ -1,20 +1,13 @@
 import { Navigate, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import PageHome from '../componentes/plantilla/PageHome';
 import ModalRegistroUsuario from "../paginas/login/ModalRegistroCliente";
-
-
-
-
-
-
-
 import ActualizarContrasena from "../paginas/login/ActualizarContraseña";
-
 import EnviarPin from "../paginas/login/EnviarPin";
-
-
 import Login from "../paginas/login/Login";
-
+import VehiculosLayout from './VehiculoLayout';
+import NuevoVehiculo from '../paginas/vehiculos/NuevoVehiculo';
+import HomeVehiculos from '../paginas/vehiculos/HomeVehiculo';
+import EditarVehiculo from '../paginas/vehiculos/EditarVehiculo'
 
 
 import { AutenticacionRoute } from "./AutenticacionRoute";
@@ -29,7 +22,7 @@ export const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route>
 
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<NuevoVehiculo />} />
 
       <Route path="/login" element={<Login />} />
       <Route path="/recuperar-pin" element={<EnviarPin />} />
@@ -37,13 +30,19 @@ export const routes = createBrowserRouter(
       <Route path="/registro-cliente" element={<ModalRegistroUsuario />} />
       <Route path="app/" element={<AutenticacionRoute />}>
 
-      
+        <Route path="vehiculos" element={<VehiculosLayout />}>
+          <Route path="nuevo" element={<NuevoVehiculo />} />
+          <Route path="editar" element={<EditarVehiculo />} />
+          <Route path="listado" element={<HomeVehiculos />} />
+          
 
-       
+        </Route>
 
-     
 
-        
+
+
+
+
         <Route path="home" element={<PageHome />} />
       </Route>
       <Route path="*" element={<Navigate to="/" />} />

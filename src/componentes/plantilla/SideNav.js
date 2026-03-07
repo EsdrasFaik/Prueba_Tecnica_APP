@@ -11,15 +11,8 @@ const navItems = [
     icono: "fas fa-car",
     url: "/app/vehiculos",
     urls: [
-      { url: "/app/vehiculos/editar", nombre: "Editar" },
-    ],
-  },
-  {
-    nombre: "Motoristas",
-    icono: "fas fa-id-card",
-    url: "/app/motoristas",
-    urls: [
-      { url: "/app/motoristas/editar", nombre: "Editar" },
+   
+      { url: "/app/vehiculos/listado", nombre: "Listado" },
     ],
   },
   {
@@ -48,7 +41,7 @@ const SideNav = () => {
 
   return (
     <aside className="main-sidebar main-sidebar-custom sidebar-dark-warning elevation-4"
-      style={{ backgroundColor: "#800000" }}
+      style={{ backgroundColor: "#8a2b9e" }}
     >
       <Link to="/app/vehiculos/editar" className="brand-link d-flex align-items-center">
         <img
@@ -77,12 +70,7 @@ const SideNav = () => {
           <ul className="nav nav-pills nav-sidebar flex-column nav-legacy nav-child-indent"
             data-widget="treeview" role="menu" data-accordion="false">
             <li className="nav-header">Menu Principal</li>
-            <li className="nav-item">
-              <Link to="/app/vehiculos/editar" className="nav-link">
-                <i className="nav-icon fas fa-tachometer-alt" />
-                <p>Inicio</p>
-              </Link>
-            </li>
+            
             <NavItems
               items={navItems}
               handleMenuToggle={handleMenuToggle}
