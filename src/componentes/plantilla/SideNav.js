@@ -45,7 +45,7 @@ const SideNav = () => {
     >
       <Link to="/app/vehiculos/editar" className="brand-link d-flex align-items-center">
         <img
-          src="/APPTEST.png"
+          src="/AppTest.png"
           alt="Logo"
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8", width: "35px", height: "35px" }}

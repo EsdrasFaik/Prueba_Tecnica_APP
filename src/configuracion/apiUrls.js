@@ -1,5 +1,5 @@
-//export const Servidor = 'https://34.30.38.210:3001/api/';
-export const Servidor = 'http://localhost:3001/api/';
+export const Servidor = process.env.REACT_APP_API_URL;
+//export const Servidor = 'http://localhost:3001/api/';
 export const UsuarioIniciarSesion = 'usuarios/iniciarsesion';
 export const UsuarioEnviarPin = 'usuarios/pin';
 export const UsuarioActualizarContrasena = 'usuarios/actualizar/contrasena';
