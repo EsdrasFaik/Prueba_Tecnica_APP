@@ -20,7 +20,7 @@ const navItems = [
     icono: "fas fa-exchange-alt",
     url: "/app/movimientos",
     urls: [
-      { url: "/app/movimientos/editar", nombre: "Editar" },
+      { url: "/app/movimientos/listado", nombre: "Listado" },
     ],
   },
 ];

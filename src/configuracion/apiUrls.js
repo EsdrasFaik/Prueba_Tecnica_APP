@@ -7,7 +7,7 @@ export const UsuariosGuardar = 'usuarios/guardar'
 
 //ver imagen
 export const ImagenVehiculos = Servidor + 'imagenes/vehiculos/';
-export const ImagenMotorista = Servidor + 'imagenes/motoristas/';
+export const ImagenMotoristas = Servidor + 'imagenes/motoristas/';
 export const ImagenMarcas = Servidor + 'imagenes/marcas/';
 
 
@@ -23,7 +23,7 @@ export const MotoristasEliminar = Servidor + 'motoristas/eliminar?id=';
 // Moviminetos
 export const MovimientosListar = Servidor + 'movimientos/listar';
 export const MovimientosBuscar = Servidor + 'movimientos/buscar?id=';
-export const MovimientosGuardar = Servidor + 'moviminetos/guardar';
+export const MovimientosGuardar = Servidor + 'movimientos/guardar';
 export const MovimientosEditar = Servidor + 'movimientos/editar?id=';
 export const MovimientosEliminar = Servidor + 'movimientos/eliminar?id=';
 

@@ -1,39 +1,39 @@
 import { mostraAlertaError, mostraAlertaOk, mostraAlertaPregunta } from "../../componentes/alerts/sweetAlert";
 import { useEffect, useState } from "react";
 import { AxiosPrivado } from "../../componentes/axios/Axios";
-import { VehiculosEliminar, VehiculoListar } from "../../configuracion/apiUrls";
+import { MotoristasEliminar, MotoristasListar } from "../../configuracion/apiUrls";
 
-const EliminarVehiculo = ({ datos, token, setListaVehiculos, ActualizarLista }) => {
+const EliminarMotorista = ({ datos, token, setListaMoristas, ActualizarLista }) => {
     const [eliminar, setEliminar] = useState(false);
 
     useEffect(() => {
         if (eliminar) {
-            eliminarVehiculo();
+            eliminarMotorista();
         }
         return () => setEliminar(false);
     }, [eliminar]);
 
-    const eliminarVehiculoPregunta = () => {
+    const eliminarMotoristaPregunta = () => {
         if (datos.tieneMovimientos) {
-            mostraAlertaError(`El vehículo "${datos.placa} - ${datos.modelo}" no se puede eliminar porque tiene movimientos asociados.`);
+            mostraAlertaError(`El motorista "${datos.nombre} ${datos.apellido}" no se puede eliminar porque tiene movimientos asociados.`);
             return;
         }
 
         mostraAlertaPregunta(
             setEliminar,
-            `¿Deseas eliminar el vehículo "${datos.placa} - ${datos.modelo}" de forma permanente?`,
+            `¿Deseas eliminar al motorista "${datos.nombre} ${datos.apellido}" de forma permanente?`,
             "warning"
         );
     };
 
-    const eliminarVehiculo = async () => {
+    const eliminarMotorista = async () => {
         if (!datos.id) {
-            return mostraAlertaError("Seleccione un vehículo");
+            return mostraAlertaError("Seleccione un motorista");
         }
 
 
         if (datos.tieneMovimientos) {
-            mostraAlertaError(`El vehículo "${datos.placa} - ${datos.modelo}" no se puede eliminar porque tiene movimientos asociados.`);
+            mostraAlertaError(`El motorista "${datos.nombre} ${datos.apellido}" no se puede eliminar porque tiene movimientos asociados.`);
             setEliminar(false);
             return;
         }
@@ -42,10 +42,10 @@ const EliminarVehiculo = ({ datos, token, setListaVehiculos, ActualizarLista }) 
             const config = {
                 headers: { 'Authorization': `Bearer ${token}` }
             };
-            await AxiosPrivado.delete(VehiculosEliminar + datos.id, config);
+            await AxiosPrivado.delete(MotoristasEliminar + datos.id, config);
 
-            mostraAlertaOk("Vehículo eliminado correctamente");
-            ActualizarLista(VehiculoListar, setListaVehiculos);
+            mostraAlertaOk("Motorista eliminado correctamente");
+            ActualizarLista(MotoristasListar, setListaMoristas);
 
         } catch (error) {
             console.error(error);
@@ -57,10 +57,10 @@ const EliminarVehiculo = ({ datos, token, setListaVehiculos, ActualizarLista }) 
     };
 
     return (
-        <button type="button" className="btn btn-danger" onClick={eliminarVehiculoPregunta}>
+        <button type="button" className="btn btn-danger" onClick={eliminarMotoristaPregunta}>
             <i className="fas fa-trash" />
         </button>
     );
 };
 
-export default EliminarVehiculo;
+export default EliminarMotorista;

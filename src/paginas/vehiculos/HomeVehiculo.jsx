@@ -255,7 +255,7 @@ const HomeVehiculos = () => {
                                 {/* Botón nuevo */}
                                 <button
                                     className="hv-btn-nuevo"
-                                    onClick={() => navigate("/app/admin/vehiculos/nuevo")}
+                                    onClick={() => navigate("/app/vehiculos/nuevo")}
                                 >
                                     <i className="fas fa-plus" /> Nuevo vehículo
                                 </button>

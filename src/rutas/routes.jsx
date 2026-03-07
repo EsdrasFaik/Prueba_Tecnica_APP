@@ -8,8 +8,9 @@ import VehiculosLayout from './VehiculoLayout';
 import NuevoVehiculo from '../paginas/vehiculos/NuevoVehiculo';
 import HomeVehiculos from '../paginas/vehiculos/HomeVehiculo';
 import EditarVehiculo from '../paginas/vehiculos/EditarVehiculo'
-
-
+import MovimientoLayout from './VehiculoLayout'
+import NuevoMovimiento from '../paginas/movimientos/NuevoMovimiento';
+import HomeMovimientos from '../paginas/movimientos/HomeMovimiento';
 import { AutenticacionRoute } from "./AutenticacionRoute";
 
 
@@ -22,7 +23,7 @@ export const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route>
 
-      <Route path="/" element={<NuevoVehiculo />} />
+      <Route path="/" element={<Login />} />
 
       <Route path="/login" element={<Login />} />
       <Route path="/recuperar-pin" element={<EnviarPin />} />
@@ -34,8 +35,11 @@ export const routes = createBrowserRouter(
           <Route path="nuevo" element={<NuevoVehiculo />} />
           <Route path="editar" element={<EditarVehiculo />} />
           <Route path="listado" element={<HomeVehiculos />} />
-          
+        </Route>
 
+        <Route path="movimientos" element={<MovimientoLayout />}>
+          <Route path="nuevo" element={<NuevoMovimiento/>} />
+          <Route path="listado" element={<HomeMovimientos/>} />
         </Route>
 
 

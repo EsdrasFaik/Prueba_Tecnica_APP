@@ -30,6 +30,11 @@ const EliminarMarcaVehiculo = ({ datos, token, setListaMarcas, ActualizarLista }
         if (!datos.id) {
             return mostraAlertaError("Seleccione una marca");
         }
+        if (datos.tieneVehiculos) {
+            mostraAlertaError(`La marca "${datos.nombre}" no se puede eliminar porque tiene vehículos asociados.`);
+            setEliminar(false);
+            return;
+        }
 
         try {
             const config = {
